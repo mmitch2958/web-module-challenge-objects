@@ -1,16 +1,180 @@
-///////////////Menu Items (MVP)///////////////////
+// //Objects 
+// // another fundamental building block of JS 
+// // they allow us to group together properties and values
+// // order of the properties does not matter
+// // Everything in JavaScript is an object! Objects are used for collections of data
 
-const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const burger = {name: "Burger", price: 18, category: "Lunch"};
-const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+// // anatomy of an object 
 
-/* Task 1a: write a function to return more menu items with the same format as the items above. */
+// // const dog = {
+// //   // key / value pairs 
+// //   name: 'Ada',
+// //   breed: 'Bali dog',
+// //   age: 3,
+// //   colour: 'brindle',
+// //   'fav Food': 'salmon',
+// //   // method - are functions that belong to the object
+// //   eat: function(){
+// //     return `${this.name} likes to eat ${this.favFood}`
+// //   }
+  
+// // }
+// // console.log(dog.age);
 
-function createMenuItem(name, cost, category){
-    /* Code here */
-}
+// // console.log(dog.eat()); // invoking the function 
 
-/* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+// // // implicit binding - this is 80% of use cases for the "this" 
+// // // when the function is invoked - look to the left of the dot - that's what "this" refers to
+
+// // console.log(dog.eat); // referencing the function 
+
+// // // return the dogs name in the console
+// // // dot notation
+// // console.log(dog.name);
+
+
+// // bracket notation - this is useful for keys with spaces in them
+// // console.log(dog['fav Food']);
+
+
+// // const dog = {
+// //   // key / value pairs 
+// //   name: 'Ada',
+// //   breed: 'Bali dog',
+// //   age: 3,
+// //   colour: 'brindle',
+// //   favFood: 'salmon',
+// //   sister:{
+// //     name: 'Noa',
+// //     breed: 'Bali dog',
+// //     age: 1,
+// //     play: function(){
+// //       return `${this.name} loves to play with her toys`;
+// //     }
+// //   },
+// //   // method - are functions that belong to the object
+// //   eat: function(){
+// //     return `${this.name} likes to eat ${this.favFood}`
+// //   },
+  
+// // }
+
+// // console.log(dog.sister.play()); // still implicit binding
+// // console.log(dog.sister.name);
+
+
+// // we can put objects inside of array!
+// // const places = [
+// //   {city: 'Tel Aviv', country: 'Israel', region: 'Middle East'},
+// //   {city: 'Toronto', country: 'Canada', region: 'North America'},
+// //   {city: 'Dar Es Salaam', country: 'Tanzania', region: 'East Africa'},
+// //   {city: 'Sonoma', country: 'USA', region: 'North America'},
+// //   {city: 'Santiago', country: 'Chile', region: 'South America'},
+// //   {city: 'Tokyo', country: 'Japan', region: 'Asia'},
+// //   {city: 'Budapest', country: 'Hungary', region: 'Europe'},
+// // ]
+
+// // console.log(places);
+
+// //Breakout
+// // create an array called northAmerica
+// // loop through places and push all of the city names that are in North America to the new array 
+
+// // create my new array
+// // const northAmerica = [];
+
+// // // loop through the places array
+// // for(let i = 0; i < places.length; i++){
+// //   // write a conditional that will check if the region is north america, if it is, push the city to the new array
+// //   if(places[i].region === 'North America'){
+// //     northAmerica.push(places[i].city);
+// //   }
+// // }
+
+// // console.log(northAmerica);
+
+// // create a function that adds a new object to the end of an array 
+// // the function should take 4 params - array name, city, country, region
+// // it should return the array with the new object 
+
+// // add new object to array 
+
+// // create a function with 4 paramerters 
+
+// // function addPlace(array, city, country, region){
+// //   // add something to the end of an array 
+// //   array.push({city, country, region});
+// //   return array;
+// // }
+
+// // console.log(addPlace(places, 'Florence', 'Italy', 'Europe'));
+
+// const places = [
+//   {city: 'Tel Aviv', country: 'Israel', region: 'Middle East'},
+//   {city: 'Toronto', country: 'Canada', region: 'North America'},
+//   {city: 'Dar Es Salaam', country: 'Tanzania', region: 'East Africa'},
+//   {city: 'Sonoma', country: 'USA', region: 'North Africa'},
+//   {city: 'Santiago', country: 'Chile', region: 'South America'},
+//   {city: 'Tokyo', country: 'Japan', region: 'Asia'},
+//   {city: 'Budapest', country: 'Hungary', region: 'Europe'},
+// ];
+
+// // write a function that changes the region at a specific index
+
+// function changeRegion(array, index, region){
+//   // array[index].region = region;
+//   return array;
+// }
+
+// console.log(changeRegion(places, 3, 'North America'));
+
+// // when the function is invoke with arg the code looks like this 
+// // places[3].region = 'North America'
+// // return places;
+
+// // more useful function 
+
+// // function changes(array, index, key, updatedValue){
+// //   array[index][key] = updatedValue;
+// //   return array;
+// // }
+
+// // const changes = (array, index, key, updatedValue) => {
+// //   array[index][key] = updatedValue;
+// //   return array;
+// // }
+
+// // console.log(changes(places, 3, 'region', 'North America'))
+
+// // we can write a function that would return a new object 
+
+// function createPet(obj, name, species, well_behaved){
+//   obj = {name, species, well_behaved};
+//   return obj;
+// }
+
+// console.log(createPet('myPet', 'Zev', 'cat', false));
+// console.log(myPet); // although myPet is the name of the object inside of the function - because of scope - this object does not exist outside of the function 
+
+
+//////////////Menu Items (MVP)///////////////////
+
+// const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
+// const burger = {name: "Burger", price: 18, category: "Lunch"};
+// const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+
+// /* Task 1a: write a function to return more menu items with the same format as the items above. */
+
+// function createMenuItem(name, price, category){
+//   return {name, price, category};
+// }
+
+// /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+// console.log(createMenuItem('hot dog', 3, 'Lunch'))
+// console.log(createMenuItem('hotCoffee', 2, 'Breakfest'))
+// console.log(createMenuItem('hotTea', 1, 'Breakfest'))
+
 
 
 
@@ -29,17 +193,18 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 ///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
-    {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
-    {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
-    {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
-    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
-    {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name:"Reyna", rating: 3.5, feedback: ""},
+                  {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
+                {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
+              {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+           {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
+           {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
+          {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
+           {name:"Reyna", rating: 3.5, feedback: ""},
 ]
-
+ 
 /* Task 3: Console.log just Julius' feedback */
 
+console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
@@ -59,7 +224,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
+  return ${arr[index].name} gave the resturant a $(arr[index].rating), add their feedback was: $(arr[index].feedback);
   }
   
 
